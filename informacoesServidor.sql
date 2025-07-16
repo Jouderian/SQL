@@ -1,7 +1,7 @@
 --------------------------------------------------------------------------------
--- Autor: Jouderian Nobre
 -- Descricao: Coleta de informacoes do servidor msSQL Server e suas bases e usuarios
--- Versao: 1 (16/07/2425) Jouderian:
+-- Versao: 1 (09/09/23) Jouderian:
+-- Versao: 2 (16/07/25) Jouderian: Melhoria na coleta de informacoes
 --------------------------------------------------------------------------------
 
 -- Sobre o msSQL instaldo
