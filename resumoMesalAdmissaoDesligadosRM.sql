@@ -35,7 +35,9 @@ From admitidos
 full Outer Join desligados
   on admitidos.MES = desligados.MES
   and admitidos.ANO = desligados.ANO
-Where Coalesce(admitidos.ANO, desligados.ANO) = Year(DateAdd(Day,-7,GetDate())) -- Considerando semana anterior para a virada do ano
+Where
+  Coalesce(admitidos.ANO, desligados.ANO) = Year(DateAdd(Day,-8,GetDate())) -- Considerando semana anterior para a virada do ano
+  and Coalesce(admitidos.MES, desligados.MES) <= Month(DateAdd(Day,-8,GetDate())) -- Considerando semana anterior para a virada do ano
 Order By
   Coalesce(admitidos.ANO, desligados.ANO),
   Coalesce(admitidos.MES, desligados.MES)
