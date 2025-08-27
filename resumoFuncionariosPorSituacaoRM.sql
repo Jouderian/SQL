@@ -8,7 +8,7 @@ Select
   Count(*) as 'qtd'
 From PFUNC as funcionarios
 Join PCODSITUACAO as situacoes
-  on situacoes.CODCLIENTE  = funcionarios.CODSITUACAO
+  on situacoes.CODCLIENTE = funcionarios.CODSITUACAO
 Where funcionarios.CODSITUACAO not in (
   'D', /* Demitido */
   'I', /* Apos. por Incapacidade Permanente */
