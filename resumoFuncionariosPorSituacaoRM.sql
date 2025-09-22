@@ -44,7 +44,7 @@ Order By
 
 Select
   situacoes.DESCRICAO as 'Situacao',
-  Count(*) as 'qtd'
+  Count(1) as 'qtd'
 From PFUNC as funcionarios
 Join PCODSITUACAO as situacoes
   on situacoes.CODCLIENTE  = funcionarios.CODSITUACAO
@@ -56,4 +56,4 @@ Where funcionarios.CODSITUACAO not in (
   'Z'  /* Admissão prox.mês */
 )
 Group by situacoes.DESCRICAO
-Order by Count(*) desc
+Order by Count(1) desc
